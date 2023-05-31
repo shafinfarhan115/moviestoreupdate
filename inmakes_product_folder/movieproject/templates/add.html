@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<form method="post" enctype="multipart/form-data">
+    <div class="container" style="padding:10px;">
+    {%csrf_token%}
+     <h2 style="text-align:center;">
+ <div class="row mb-3" style="padding:2px">
+     <label class="col-sm-3 col-form-label" >Movie Name</label>
+     <div align="center" class="col-sm-7">
+         <input type="text" class="form-control" name="name" placeholder="enter your movie name" required="required">
+     </div>
+ </div>
+         <div class="row mb-3" style="padding:2px">
+             <label class="col-sm-3 col-form-label" >Description</label>
+             <div align="center" class="col-sm-7">
+                 <input type="text" class="form-control" name="desc" placeholder="enter your movie description" required="required">
+                </div>
+         </div>
+         <div class="row mb-3" style="padding:2px">
+             <label class="col-sm-3 col-form-label" >Movie Year</label>
+             <div align="center" class="col-sm-7">
+                 <input type="text" class="form-control" name="year" placeholder="enter your movie year">
+                </div>
+            </div>
+         <div class="row mb-3" style="padding:2px">
+                <label class="col-sm-3 col-form-label" >Image</label>
+                <div align="center" class="col-sm-7">
+                    <input type="file" class="form-control" name="img" placeholder="choose file here" required="required">
+                </div>
+            </div>
+         <div class="col-sm-5" align="center" style="padding:10px">
+             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                 <button class="btn btn-primary" style="width:150px;" type="submit">Submit</button>
+             </div>
+         </div>
+
+     </h2>
+    </div>
+</form>
+{% endblock %}
